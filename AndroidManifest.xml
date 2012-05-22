@@ -7,10 +7,11 @@
     <uses-sdk android:minSdkVersion="8" />
 <uses-permission android:name="android.permission.INTERNET"></uses-permission>
     <application
+        android:name=".ConferencesAndroid"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name" >
         <activity
-            android:name=".ConfernecesAndroidClientActivity"
+            android:name=".ui.ConfernecesAndroidClientActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
