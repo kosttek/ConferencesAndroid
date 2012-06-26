@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 
-public class Conference implements Serializable{
+public class Conference implements Serializable, BaseObject {
 	
 
 	private int id;

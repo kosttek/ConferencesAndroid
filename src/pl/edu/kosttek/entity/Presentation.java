@@ -5,7 +5,7 @@ package pl.edu.kosttek.entity;
 
 
 
-public class Presentation {
+public class Presentation implements BaseObject {
 
 	private int id;
 

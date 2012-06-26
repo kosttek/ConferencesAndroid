@@ -1,4 +1,4 @@
-package utils;
+package pl.edu.kosttek.utils;
 
 import java.text.DateFormat;
 import java.text.ParseException;

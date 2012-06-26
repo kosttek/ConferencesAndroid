@@ -3,7 +3,7 @@ package pl.edu.kosttek.entity;
 
 
 
-public class Boardroom {
+public class Boardroom implements BaseObject {
 
 	private int id;
 

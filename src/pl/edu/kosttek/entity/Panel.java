@@ -2,7 +2,7 @@ package pl.edu.kosttek.entity;
 
 
 
-public class Panel {
+public class Panel implements BaseObject {
 
 
 	private int id;

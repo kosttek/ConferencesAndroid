@@ -1,7 +1,48 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
 
     <string name="hello">Hello World, ConfAndActivity!</string>
-    <string name="app_name">ConfAnd</string>
-
+    <string name="app_name">Conferences Application</string>
+  	<string name="app_header">Conferences System</string>
+    <string name="hint">Tap conference name to show its details.</string>
+    <string name="panel_header">Available panels in this conference</string>
+    <string name="panel_hint">Tap panel to show presentations and details</string>
+    
+    <string-array name="conferences_names">
+		<item>Conference nr 1</item>
+		<item>Conference nr 2</item>
+		<item>Conference nr 3</item>
+		<item>Conference nr 4</item>
+		<item>Conference nr 5</item>
+		<item>Conference nr 6</item>
+		<item>Conference nr 7</item>
+		<item>Conference nr 8</item>
+		<item>Conference nr 9</item>
+		<item>Conference nr 10</item>
+    </string-array>
+    
+    <string-array name="details_phrases">
+		<item>Details 1</item>
+		<item>Details 2</item>
+		<item>Details 3</item>
+		<item>Details 4</item>
+		<item>Details 5</item>
+		<item>Details 6</item>
+		<item>Details 7</item>
+		<item>Details 8</item>
+		<item>Details 9</item>
+		<item>Details 10</item>
+    </string-array>
+    
+    <string-array name="panel_names">
+		<item>Panel 1</item>
+		<item>Panel 2</item>
+		<item>Panel 3</item>
+    </string-array>
+    
+   
+    <string name="det_text"> This is a conference about rabbits and carrots and many interesting things like playing ping-pong on the table.  </string>
+     <string name="info_name">Detail info</string>
+ 
+ 	
 </resources>

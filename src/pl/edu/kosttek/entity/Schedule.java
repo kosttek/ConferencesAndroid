@@ -3,7 +3,7 @@ package pl.edu.kosttek.entity;
 import java.util.Date;
 
 
-public class Schedule {
+public class Schedule implements BaseObject {
 
 	private int id;
 
@@ -80,5 +80,13 @@ public class Schedule {
 
 	public void setBoardroom(Boardroom boardroom) {
 		this.boardroom = boardroom;
+	}
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 }

@@ -23,20 +23,51 @@ public class ConferenceArrayAdapter extends ArrayAdapter<Conference>{
 		
 		// TODO Auto-generated constructor stub
 	}
+	static class ViewHolder {
+		public TextView tvConf;
+		public TextView tvItemNumber;
+	}
+	
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
-		LayoutInflater inflater = (LayoutInflater) context
-				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-		View rowView = inflater.inflate(R.layout.conference_row_layout, parent, false);
-		TextView textView = (TextView) rowView.findViewById(R.id.conf_title);
-		textView.setText(conferenceList.get(position).getTitle());
-		textView = (TextView) rowView.findViewById(R.id.conf_desc);
-		textView.setText(conferenceList.get(position).getDescription());
-		textView = (TextView) rowView.findViewById(R.id.conf_start_date);
-		textView.setText(conferenceList.get(position).getStartDate().toGMTString());
-		textView = (TextView) rowView.findViewById(R.id.conf_end_date);
-		textView.setText(conferenceList.get(position).getEndDate().toGMTString());
+		ViewHolder viewHolder;
+		View rowView = convertView;
+		if(rowView == null) {
+			LayoutInflater inflater = (LayoutInflater) context
+					.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+			rowView = inflater.inflate(R.layout.list_item, null, true);
+			viewHolder = new ViewHolder();
+			viewHolder.tvConf = (TextView) rowView.findViewById(R.id.tvConf);
+			viewHolder.tvItemNumber = (TextView) rowView.findViewById(R.id.tvItemNumber);
+			rowView.setTag(viewHolder);
+		} else {
+			viewHolder = (ViewHolder) rowView.getTag();
+		}
+		viewHolder.tvItemNumber.setText(Integer.toString(position+1));
+		viewHolder.tvConf.setText(conferenceList.get(position).getTitle());
 		return rowView;
 	}
+	
+//	@Override
+//	public View getView(int position, View convertView, ViewGroup parent) {
+//		LayoutInflater inflater = (LayoutInflater) context
+//				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+//		View rowView = inflater.inflate(R.layout.conference_row_layout, parent, false);
+//		TextView textView = (TextView) rowView.findViewById(R.id.conf_title);
+//		textView.setText(conferenceList.get(position).getTitle());
+//		textView = (TextView) rowView.findViewById(R.id.conf_desc);
+//		textView.setText(conferenceList.get(position).getDescription());
+//		textView = (TextView) rowView.findViewById(R.id.conf_start_date);
+//		textView.setText(conferenceList.get(position).getStartDate().toGMTString());
+//		textView = (TextView) rowView.findViewById(R.id.conf_end_date);
+//		textView.setText(conferenceList.get(position).getEndDate().toGMTString());
+//		return rowView;
+//	}
+//	@Override
+//	public Conference getItem(int position) {
+//		// TODO Auto-generated method stub
+//		return super.getItem(position);
+//		
+//	}
 	
 }
