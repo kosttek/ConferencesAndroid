@@ -5,9 +5,12 @@ import pl.edu.kosttek.R;
 import pl.edu.kosttek.adapters.ConferenceArrayAdapter;
 import pl.edu.kosttek.connection.ConferencesConnectionManager;
 import pl.edu.kosttek.entity.Conference;
+import pl.edu.kosttek.settings.ConfigurationData;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -22,6 +25,7 @@ public class ConfernecesAndroidClientActivity extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		System.out.println(ConfigurationData.URL);
 		setContentView(R.layout.main);
 		//TextView textView = (TextView) findViewById(R.id.text);
 		ListView listView = (ListView) findViewById(R.id.conf_list);
@@ -61,4 +65,18 @@ public class ConfernecesAndroidClientActivity extends Activity {
 
 		
 	}
+	   public boolean onCreateOptionsMenu(Menu menu) {
+	    	menu.add(0,1, 0, "Settings");
+	    	return true;
+	    }
+	    @Override
+	    public boolean onOptionsItemSelected(MenuItem item) {
+	        switch (item.getItemId()) {
+	        case 1:
+	        	Intent i = new Intent(this, SettingsActivity.class);
+	        	startActivity(i);
+	            break;
+	        }
+	        return true;
+	    }
 }
